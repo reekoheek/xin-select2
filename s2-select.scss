@@ -1,4 +1,11 @@
 s2-select {
+  overflow: hidden;
+
+  &.form-control {
+    padding: 0;
+    border: 0;
+  }
+
   .select2-container {
     width: auto!important;
   }
