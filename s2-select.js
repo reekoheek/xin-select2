@@ -18,6 +18,7 @@ export class S2Select extends Component {
 
       options: {
         type: Array,
+        observer: 'optionsChanged(options)',
       },
 
       placeholder: {
@@ -49,14 +50,7 @@ export class S2Select extends Component {
       this.set('value', this.$select.val());
     });
 
-    this.$select.select2({
-      theme: 'bootstrap4',
-      data: this.options,
-      placeholder: this.placeholder,
-      allowClear: this.allowClear,
-      multiple: this.multiple,
-    });
-
+    this.optionsChanged(this.options);
     this.valueChanged(this.value);
   }
 
@@ -71,6 +65,24 @@ export class S2Select extends Component {
     if (this.$select) {
       this.$select.val(value).trigger('change.select2');
     }
+  }
+
+  optionsChanged (options) {
+    if (!this.$select) {
+      return;
+    }
+
+    if (this.$select.data('select2')) {
+      this.$select.select2('destroy');
+    }
+
+    this.$select.select2({
+      theme: 'bootstrap4',
+      data: options,
+      placeholder: this.placeholder,
+      allowClear: this.allowClear,
+      multiple: this.multiple,
+    });
   }
 }
 
