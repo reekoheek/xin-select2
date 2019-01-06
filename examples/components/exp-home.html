@@ -1,0 +1,43 @@
+<select (change)="onFooChanged(evt)" value="{{foo}}">
+  <option>One</option>
+  <option>Two</option>
+  <option>Three</option>
+</select>
+
+<div>
+  <label>Selected foo:</label>
+  <span>[[foo]]</span>
+</div>
+
+<s2-select value="{{bar}}" options='[
+  { "id": "foo", "text": "Foo" },
+  { "id": "bar", "text": "Bar" },
+  { "id": "baz", "text": "Baz" }
+]' (change)="onBarChanged(evt)"></s2-select>
+
+<div>
+  <label>Selected bar:</label>
+  <span>[[bar]]</span>
+</div>
+
+<select (change)="onBazChanged(evt)" value="{{baz}}">
+  <option>One</option>
+  <option>Two</option>
+  <option>Three</option>
+</select>
+
+<div>
+  <label>Selected baz:</label>
+  <span>[[baz]]</span>
+</div>
+
+<select (change)="onBaz1Changed(evt)" value="{{baz1}}">
+  <option>One</option>
+  <option>Two</option>
+  <option>Three</option>
+</select>
+
+<div>
+  <label>Selected baz1:</label>
+  <span>[[baz1]]</span>
+</div>

@@ -65,6 +65,8 @@ export class S2Select extends Component {
     if (this.$select) {
       this.$select.val(value).trigger('change.select2');
     }
+
+    this.fire('change', value);
   }
 
   optionsChanged (options) {
