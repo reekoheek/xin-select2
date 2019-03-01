@@ -85,6 +85,10 @@ export class S2Select extends Component {
       allowClear: this.allowClear,
       multiple: this.multiple,
     });
+
+    if (this.value) {
+      this.$select.val(this.value).trigger('change.select2');
+    }
   }
 }
 

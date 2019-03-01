@@ -1,6 +1,6 @@
 {
   "name": "xin-select2",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "xin select2 component",
   "main": "index.js",
   "scripts": {
