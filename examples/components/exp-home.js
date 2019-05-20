@@ -26,10 +26,23 @@ class ExpHome extends Component {
         type: 'String',
         value: '',
       },
+      optType: {
+        type: Array,
+        value: [
+          { 'id': 'foo', 'text': 'Foo' },
+          { 'id': 'bar', 'text': 'Bar' },
+          { 'id': 'baz', 'text': 'Baz' },
+        ],
+      },
     };
   }
 
   onFooChanged () {
+    this.set('optType', [
+      { 'id': 'foo', 'text': 'Foo1' },
+      { 'id': 'bar', 'text': 'Bar2' },
+
+    ]);
     this.async(() => {
       console.info('foo: ' + this.foo);
     });

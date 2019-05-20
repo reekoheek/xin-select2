@@ -9,11 +9,7 @@
   <span>[[foo]]</span>
 </div>
 
-<s2-select value="{{bar}}" options='[
-  { "id": "foo", "text": "Foo" },
-  { "id": "bar", "text": "Bar" },
-  { "id": "baz", "text": "Baz" }
-]' (change)="onBarChanged(evt)"></s2-select>
+<s2-select value="{{bar}}" options="[[optType]]" (change)="onBarChanged(evt)"></s2-select>
 
 <div>
   <label>Selected bar:</label>

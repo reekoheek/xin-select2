@@ -1,6 +1,6 @@
 {
   "name": "xin-select2",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "xin select2 component",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "select2": "^4.0.6-rc.1",
+    "select2": "^4.0.7",
     "select2-bootstrap4-theme": "^1.0.0"
   },
   "husky": {

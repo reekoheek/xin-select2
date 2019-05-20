@@ -75,6 +75,7 @@ export class S2Select extends Component {
     }
 
     if (this.$select.data('select2')) {
+      this.$select.html('');
       this.$select.select2('destroy');
     }
 
