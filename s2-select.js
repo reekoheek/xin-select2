@@ -56,9 +56,10 @@ export class S2Select extends Component {
 
   detached () {
     super.detached();
-
-    this.$select.off('change');
-    this.$select.select2('destroy');
+    if (this.$select) {
+      this.$select.off('change');
+      this.$select.select2('destroy');
+    }
   }
 
   valueChanged (value) {
@@ -75,6 +76,7 @@ export class S2Select extends Component {
     }
 
     if (this.$select.data('select2')) {
+      this.$select.html('');
       this.$select.select2('destroy');
     }
 
